@@ -133,3 +133,16 @@ def apply_delta(dir_a, delta_zip, target_b):
 
     print(f"Successfully reconstructed B at {target_path}")
 ```
+## Building Standalone Executable
+
+To bundle `deltagen` into a single standalone `.exe` (no Python environment required for end-users), install PyInstaller and run:
+
+```bash
+pip install pyinstaller
+pyinstaller --clean --noconfirm --console --onefile --noupx --name deltagen deltagen.py
+
+# Generate JSON manifest
+deltagen.exe C:\path\to\A C:\path\to\B --depth 1
+
+# Generate ZIP patch package
+deltagen.exe C:\path\to\A C:\path\to\B --zip
