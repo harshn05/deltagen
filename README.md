@@ -152,3 +152,5 @@ deltagen.exe C:\path\to\A C:\path\to\B --depth 1
 # Generate ZIP patch package
 deltagen.exe C:\path\to\A C:\path\to\B --zip
 ```
+
+A C++ implementation of the same is available [here](https://github.com/harshn05/deltagen_cpp).
