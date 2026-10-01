@@ -140,9 +140,15 @@ To bundle `deltagen` into a single standalone `.exe` (no Python environment requ
 ```bash
 pip install pyinstaller
 pyinstaller --clean --noconfirm --console --onefile --noupx --name deltagen deltagen.py
+```
 
+The compiled binary will be generated inside the dist/ folder (dist/deltagen.exe).
+Usage with EXE:
+
+```bash
 # Generate JSON manifest
 deltagen.exe C:\path\to\A C:\path\to\B --depth 1
 
 # Generate ZIP patch package
 deltagen.exe C:\path\to\A C:\path\to\B --zip
+```
